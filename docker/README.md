@@ -20,6 +20,6 @@ After the process is finished you have a `pyspark:scd` image, that will be the b
 
 ### Run the container
 
-From your project folder, run `docker run -it -v $(pwd):/ pyspark:scd3 /bin/bash`
+From your project folder, run `docker run -it -v $(pwd):/scd/ pyspark:scd3 /bin/bash`
 This will start the container and open up a bash console inside it.
-At this point you can execute `python`, a pyspark console with `pyspark` or run test cases using `pytest` 
+At this point you can execute `python`, a pyspark console with `pyspark` or run test cases using `pytest`
