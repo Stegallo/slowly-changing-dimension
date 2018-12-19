@@ -29,15 +29,7 @@ def test_first_insert(request):
     expected_df.show()
 
     log("executing function")
-    # actual_df = f(input_df)
-    actual_df = SPARK.createDataFrame(
-        [('1', 'Alice', '1900-01-01', '2099-12-31'),
-         ('2', 'Bob', '1900-01-01', '2099-12-31')],
-        StructType(
-            [StructField("customer_id", StringType(), True),
-             StructField("customer_name", StringType(), True),
-             StructField("effective_start_date", StringType(), True),
-             StructField("effective_end_date", StringType(), True)]))
+    actual_df = f(input_df)
     actual_df.show()
 
     assert actual_df.orderBy("customer_id").collect() \
