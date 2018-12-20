@@ -1,7 +1,7 @@
 from pyspark.sql.types import StructField
 from pyspark.sql.types import StructType
 from pyspark.sql.types import StringType
-from test_environment_setup import SPARK, log
+from .test_environment_setup import SPARK, log
 
 def test_0():
     """
